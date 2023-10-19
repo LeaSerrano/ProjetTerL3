@@ -1,0 +1,50 @@
+<div class="CouvertureMin" style="display:none;">
+    <div class="Donnees" >
+       <div id="PartieGauche">
+            <div class="Boutons">
+                <button class="styleBouton" onclick="clickOngletDF('Gauche11','Gauche12','Gauche13')"><p class="texteBouton">Dépendances</p><p class="texteBouton">Fonctionnelles</p></button>
+                <button id='bouton12' class="styleBouton" onclick="clickOngletCouvMin('Gauche11','Gauche12','Gauche13')"><p class="texteBouton">Couverture</p><p class="texteBouton">Minimale</p></button>
+                <button id="bouton13" class="styleBouton" onclick="clickOngletRelation('Gauche11','Gauche12','Gauche13')"><p class="texteBouton2">Relations</p></button>
+            </div>
+            <div class="texteAffichageAttributs"><p id="ZoneTxt1"></p></div>
+            <div id=atom1></div>
+                <div id="Gauche11" style="display:block;">
+                    <p class=Reduce id="AffichageDF2"></p>
+            </div>
+
+            <div id="Gauche12" style="display:none;">
+                <p class=Reduce id="CouvMin2"></p>
+            </div>
+            <div id="Gauche13" style="display:none;">
+                <p class=Reduce id="Relation2"></p>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="affichageGraphe2" name="affichageGraphe2" onclick="afficherGraphe(affichageGraphe2.checked,'FormulaireCheckBox2')">
+                <label for="affichageGraphe2">Graphe optimisé des dépendances fonctionnelles</label>
+                <div id="FormulaireCheckBox2" ></div>
+            </div>
+        </div>
+        <div id="PartieDroite">
+            <div id="Droite">
+                <button class="styleBouton" onclick="clickOngletExplication('Droite1', 'Droite2')">Afficher le résultat</button>
+                <button class="styleBouton" onclick="clickOngletTrace('Droite1', 'Droite2'),afficherTraceCouverture()">Explication/Trace de l'algorithme</button>
+
+                    <div id="Droite1" style="display:block;">
+                        <p style="text-decoration:underline;" id="ZoneEcritureCouv"></p>
+                        <p class=Reduce id=CouvMin></p>
+                    </div>
+
+                    <div id="Droite2" style="display:none;">
+                        <div>
+                            <p class="titreExplications">Explication : </p>
+                            <p id="explicationsCouvMin"></p>
+                        </div>
+                        <div class="Trace">
+                            <p class="titreExplications">Trace : </p>
+                            <p id="traceCouvMin"></p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

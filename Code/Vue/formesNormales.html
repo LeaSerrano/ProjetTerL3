@@ -1,0 +1,83 @@
+<div class="FormesNormales" style="display:none;">
+    <div class="Donnees" >
+    <div id="PartieGauche">
+        <div class="Boutons">
+                <button class="styleBouton" onclick="clickOngletDF('Gauche41','Gauche42','Gauche43')"><p class="texteBouton">Dépendances</p><p class="texteBouton">Fonctionnelles</p></button>
+                <button id='bouton42' class="styleBouton" onclick="clickOngletCouvMin('Gauche41','Gauche42','Gauche43')"><p class="texteBouton">Couverture</p><p class="texteBouton">Minimale</p></button>
+                <button class="styleBouton" onclick="clickOngletRelation('Gauche41','Gauche42','Gauche43')"><p class="texteBouton2">Relations</p></button>
+        </div>
+        <div class="texteAffichageAttributs"><p id="ZoneTxt4"></p></div>
+                <div id=atom4></div>
+                <div id="Gauche41" style="display:block;">
+                    <p class=Reduce id="AffichageDF5"></p>
+                </div>
+                <div>
+                </div>
+
+                <div id="Gauche42" style="display:none;">
+                    <p class=Reduce id="CouvMin5"></p>
+                </div>
+
+                <div id="Gauche43" style="display:none;">
+                    <p class=Reduce id="Relation5"></p>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="affichageGraphe5" name="affichageGraphe5" onclick="afficherGraphe(affichageGraphe5.checked,'FormulaireCheckBox5')">
+                    <label for="affichageGraphe5">Graphe optimisé des dépendances fonctionnelles</label>
+                    <div id="FormulaireCheckBox5" ></div>
+                </div>
+            </div>
+          
+            <div id="PartieDroite">
+                <div>
+                <div id="DroiteFN2">
+                    <div>
+                    <button class="styleBouton" onclick="clickOngletExplication('Droite7', 'Droite8')">Afficher le résultat</button>
+                    <button class="styleBouton" onclick="clickOngletTrace('Droite7', 'Droite8'),afficherTraceFN2()">Explication/Trace de l'algorithme</button>
+
+                    <div id="Droite7" style="display:block;">
+                    <p style="text-decoration:underline;" id="ZoneEcritureFN2">Il faut d'abord faire l'algorithme de synthèse</p>
+                    <p class=Reduce2 id="FN2"></p>
+                    </div>
+
+                    <div id="Droite8" style="display:none;">
+                        <div>
+                            <p class="titreExplications">Explication : </p>
+                            <p id="explicationsFN2"></p>
+                        </div>
+                        <div  class="Trace">
+                            <p id="trace2FN"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+                <div id="placementTexteFN3">
+                <div id="DroiteFN3">
+                    <div>
+                    <button class="styleBouton" onclick="clickOngletExplication('Droite9', 'Droite10')">Afficher le résultat</button>
+                    <button class="styleBouton" onclick="clickOngletTrace('Droite9', 'Droite10'),afficherTraceFN3(afficherResultatFN2())">Explication/Trace de l'algorithme</button>
+
+                    <div id="Droite9" style="display:block;">
+                    <p style="text-decoration:underline;" id="ZoneEcritureFN3">Il faut d'abord vérifier qu'on est bien en 2ème forme normale</p>
+                    <p class=Reduce2 id=FN3></p>
+                    </div>
+
+                    <div id="Droite10" style="display:none;">
+                        <div>
+                            <p class="titreExplications">Explication : </p>
+                            <p id="explicationsFN3"></p>
+                        </div>
+                        <div  class="Trace">
+                            <p class="titreExplications">Trace : </p>
+                            <p id="trace3FN"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div> 
+        </div>
+    </div>

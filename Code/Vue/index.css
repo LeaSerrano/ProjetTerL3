@@ -1,0 +1,584 @@
+:root {
+    /*--color-bg: #ddd7d7;
+    --color-mode: 'light';
+    --color-dark: #141414;
+    --color-dark-alpha: rgba(0, 0, 0, 0.1);
+    --color-light: #efefef;
+    --color-light-alpha: rgba(255, 255, 255, 0.9)*/
+    background-image: /*url("https://img.freepik.com/free-photo/technology-network-background_34629-304.jpg?w=1060");*/ /*url("https://img.freepik.com/free-vector/5g-networking-technology-background-with-blue-digital-line_53876-119505.jpg?t=st=1651328348~exp=1651328948~hmac=ee7fd3f0a039903dbefb6716df0fcf19b22e5358642e192dfadf402825e3faa6&w=2000");*/ /*url("https://img.freepik.com/free-vector/5g-networking-technology-background-vector-with-blue-digital-line_53876-126043.jpg?t=st=1651328523~exp=1651329123~hmac=0adc7db8443376abf7c899220fbdcdd899f2b577deaf8f35d0f7049f4ac01d58&w=2000");*/ /*url("https://img.freepik.com/free-vector/5g-networking-technology-background-with-blue-digital-line_53876-119504.jpg?t=st=1651328646~exp=1651329246~hmac=2d9c8f3d8ae3e1ca051bf143eb10e2cca92ec54a33c2f6578f735c570f7591ad&w=2000");*/ /*url("https://img.freepik.com/free-vector/blue-polygon-dark-background-social-template_53876-116080.jpg?t=st=1651328781~exp=1651329381~hmac=a9dc8d5bf331bae780ab060f87ea4428d45179a5657f07b62cc09e90114dead1&w=2000");*/ /*url("https://img.freepik.com/free-vector/worldwide-connection-blue-background-illustration-vector_53876-76826.jpg?t=st=1651328916~exp=1651329516~hmac=de2ea37db3239e866ccd761ad65288f93212ed1cc60a814c8c0b48e4f14e1964&w=2000");*/ /*url("https://img.freepik.com/free-vector/digital-grid-technology-background-vector-blue-tone_53876-126072.jpg?t=st=1651329107~exp=1651329707~hmac=4f4bf7c92292b1ca713d59e063b65d3341cd744e3c19ccbdc4b5ecd3cdd2f611&w=2000");*/ /*url("https://img.freepik.com/free-vector/black-neural-network-illustration_53876-78759.jpg?t=st=1651329262~exp=1651329862~hmac=93f158c49a5f2d4d19ddc63e1304670e48125aea353d725f82ef1b388f3730e7&w=1800");*/ url("../../Ressources/fond.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.component {
+    background-color: var(--color-bg);
+}
+
+[data-theme="dark"] {
+    --color-bg: #292929;
+}
+
+[data-theme="light"] {
+    --color-bg: #ddd7d7;
+}
+
+.header {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1% 1%;
+    color : #FEFBEA;
+    background-color: #1C1C1C;
+    opacity: 0.9;
+    align-items: center;
+    justify-content: center;
+}
+
+/* pour l'affichage du menu*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Libre Baskerville", sans-serif;
+}
+
+#MenuPrincipal {
+    width: 100%;
+    margin-bottom: 2%;
+    padding-bottom: 0.5%;
+    background-color: #1C1C1C;
+    opacity: 0.9;
+}
+
+#MenuPrincipal ul {
+    list-style-type: none;
+}
+
+#MenuPrincipal li {
+    width: 12%;
+    /*100% divisé par le nombre d'éléments de menu*/
+    text-align: center;
+    display: inline;
+    /*Centre le texte dans les éléments de menu*/
+}
+
+#MenuPrincipal .menu {
+    display: flex;
+    flex-direction: row;
+}
+
+/*Evite que le menu n'ait une hauteur nulle*/
+
+#MenuPrincipal ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#MenuPrincipal a {
+    display: block;
+    /*Toute la surface sera cliquable*/
+    text-decoration: none;
+    color: #FEFBEA;
+    border-bottom: 2px solid transparent;
+    /*Evite le décalage des éléments sous le menu à cause de la bordure en :hover*/
+    padding: 10px 0px;
+    /*Agrandit le menu et espace la bordure du texte*/
+    cursor: pointer;
+    font-size: 20px;
+    transition: 350ms;
+}
+
+#MenuPrincipal a:hover {
+    /*color: #8AB0BA;*/
+    border-bottom: 2px solid #8AB0BA;
+    transition: 350ms;
+}
+
+/*fin affichage du menu */
+
+.Accueil {
+    box-sizing: border-box;
+    background-color: #303030;
+    opacity: 0.9;
+}
+
+#video {
+    position: relative;
+    box-sizing: border-box;
+    padding: 30px 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: 5%;
+    color : #FEFBEA;
+}
+
+.intro {
+    color: #FEFBEA;
+    width: fit-content;
+    text-align: start;
+    padding-top : 2%;
+    margin-left : 20px;
+    margin-right: 20px;
+    font-size: 120%;
+}
+
+#Block{
+    display: flex;
+}
+
+.Ressources {
+    width: fit-content;
+    margin-top: 50px;
+    margin-right: 30%;
+    background-color: #5B5C5C;
+    color : #FEFBEA;
+    opacity: 0.9;
+    height:fit-content;
+    overflow-y: auto;
+}
+
+.Ressources h4{
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: fit-content;
+}
+
+.Ressources a{
+    margin-left: 15%;
+    width: fit-content;
+}
+
+#Block {
+    display: flex;
+}
+
+.ZoneDF {
+    display : flex;
+    position: relative;
+    box-sizing: border-box;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.CouvertureMin {
+    display : flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.FermetureAtt {
+    display : flex;
+    box-sizing: border-box;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.AlgoSynthese {
+    display : flex;
+    box-sizing: border-box;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.FormesNormales {
+    display: flex;
+    box-sizing: border-box;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.AlgoChase {
+    display : flex;
+    box-sizing: border-box;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+#infobulle {
+    position: relative;
+    font-size: 15px;
+}
+
+.formAddDF {
+    width: 400px;
+    height: 40px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.styleBouton {
+    background-color: white;
+    color : black;
+    box-sizing: border-box;
+    padding: 5px 5px;
+    border:#0D1D2C block;
+    margin-right: 5px;
+    outline: none;
+    font-size: 95%;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    color: #8cb3bd;
+}
+
+#GaucheHeader2, #DroiteHeader2 {
+    margin-top : 6%;
+}
+
+.disable-text{
+    -webkit-user-select:none;
+    -webkit-touch-callout:none;
+         -moz-user-select:none;
+         -ms-user-select:none;
+         user-select:none;   
+
+   }
+
+#switch {
+    background-color: transparent;
+    box-shadow: none;
+    margin-right: 0%;
+    padding: 3% 0%;
+}
+
+.DonneesFormulaire {
+    display: flex;
+    flex-direction: row;
+}
+
+.Trace {
+    margin-left: 1%;
+}
+
+.Donnees {
+    display: flex;
+    flex-direction: row;
+}
+
+#PartieGauche {
+    display: flex;
+    flex : 35%;
+    flex-direction: column;
+    color : #FEFBEA;
+    background-color: #303030;
+    opacity: 0.9;
+    padding-top : 1%;
+    padding-left: 1%;
+}
+
+.DFGauche, .couvMinGauche, .relationGauche {
+    text-decoration: underline;
+    padding-bottom: 1%;
+}
+
+#PartieDroiteFormulaire {
+    display: flex;
+    flex-direction: column;
+    padding-left : 2%;
+    flex : 65%;
+    color : #FEFBEA;
+    background-color: #303030;
+    opacity: 0.9;
+    margin-left: 1%;
+    padding-top : 1%;
+    padding-bottom : 1%;
+    white-space: nowrap;
+    overflow-x: auto;    
+}
+
+#PartieDroite {
+    display: flex;
+    flex-direction: column;
+    flex : 65%;
+    margin-left: 1%;
+    padding-top : 1%;
+    padding-bottom : 1%;
+    padding-left : 2%;
+    color : #FEFBEA;
+    background-color: #303030;
+    opacity: 0.9;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: auto;      
+}
+
+#PartieDroiteChase {
+    display: flex;
+    flex-direction: column;
+    flex : 65%;
+    margin-left: 1%;
+    padding-top : 1%;
+    padding-bottom : 1%;
+    padding-left : 2%;
+    color : #FEFBEA;
+    background-color: #303030;
+    opacity: 0.9;
+    white-space: nowrap;
+    overflow-x: auto; 
+    overflow-y: auto;     
+}
+
+#PartieAPropos {
+    box-sizing: border-box;
+    background-color: #303030;
+    opacity: 0.9;
+}
+
+.texteAPropos {
+    color: #FEFBEA;
+    text-align: start;
+    padding-top : 1%;
+    padding-bottom: 1%;
+    margin-left : 20px;
+    margin-right: 20px;
+    font-size: 120%;
+}
+
+.checkbox {
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+ 
+footer {
+    margin: 0 auto;
+    padding: 0;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    color: white;
+    height: 1%;
+    opacity: 0.9;
+    clear: both;
+}
+
+#explicationsCouvMin, #explicationsFermAtt, #explicationsSynthe, #explicationsFN2, #explicationsFN3, #explicationsChase {
+   width: fit-content;
+    font-size: 20px;
+}
+
+
+#formAddDF>input {
+    display: none;
+}
+
+#interact>button {
+   
+    background: transparent;
+    border: none !important;
+    font-size:0;
+}
+
+#formAddDF>button {
+    cursor: help;
+    background: transparent;
+    border: none !important;
+    font-size:0;
+}
+
+
+#PartieDroiteFormulaire #formulaire{
+    max-height: 800px;
+    width: fit-content;  
+    overflow-y: auto;
+}
+
+#interact {
+   display: flex;
+}
+
+ #interact #PetitTitre h4{
+    flex-grow: 1;
+    border-radius: 25px;
+}
+
+#interact #formAddDF{
+flex-grow: 2;
+margin-left: 25px;
+}
+
+.DonneesFormulaire #PetitTitre h4{
+    width: fit-content;
+    border-radius: 25px;
+}
+
+#PartieGauche #PetitTitre h4{
+    width: fit-content;
+    border-radius: 25px;
+}
+
+#PartieDroite #PetitTitre h4{
+    width: fit-content;
+    border-radius: 25px;
+}
+
+
+.Reduce{
+    margin-top: 12px;
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+.Reduce2{
+    margin-top: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.Reduce3{
+    margin-top: 12px;
+    max-height: 800px;
+    max-width: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+
+.Boutons{
+    overflow-y: auto;
+    margin-right: 10px;
+    color:#E1D9E7;
+}
+
+.texteAffichageAttributs {
+    padding-top: 1%;
+}
+
+#Droite1, #Droite2, #Droite3, #Droite4, #Droite5,  #Droite6, #Droite7, #Droite8, #Droite9, #Droite10, #Droite11, #Droite12 {
+    padding-top: 1%;
+    padding-right: 1%;
+}
+
+#placementTexteFN3 {
+    padding-top: 5%;
+}
+
+#alerteRafraichissement {
+    color: red;
+    font-size: 80%;
+}
+
+#liensRessources {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.titreExplications {
+    padding-bottom: 2%;
+    text-decoration: underline;
+}
+
+.texteBouton {
+    font-size: 100%;
+    font-weight: 500;
+}
+
+.texteBouton2 {
+    font-size: 100%;
+    font-weight: 500;
+    padding-bottom: 25%;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+tr,td{
+    border:solid;
+    padding: 5px;
+}
+
+#menuBurger, #labelBurger
+{
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .header, .DonneesFormulaire, .Donnees{
+        flex-direction: column;
+    }
+    #Block {
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #MenuPrincipal li, #PartieGauche{
+        width: 100%;
+    }
+    #video {
+        width: 100%;
+        padding-right: 0%;
+        padding-left: 0%;
+        margin-left: 0%;
+    }
+    iframe {
+        width: auto;
+        height: auto;
+    }
+    #MenuPrincipal .menu {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #PartieDroiteFormulaire {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 1%;
+    }
+    #PartieDroite {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 1%;
+    }
+    #PartieDroiteFN {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 1%;
+        flex-direction: column;
+    }
+    #DroiteFN3 {
+        margin-left: 0%;
+    }
+    .Ressources {
+        margin: 0%;
+    }
+    #labelBurger
+    {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+    #menuBurger:checked + .menu {
+        display: flex;
+    }
+    #menuBurger:not:checked + .menu {
+        display: none;
+    }
+  }
+

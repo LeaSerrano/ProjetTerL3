@@ -1,0 +1,53 @@
+<div class="FermetureAtt" style="display:none;">
+    <div class="Donnees" >
+    <div id="PartieGauche">
+    <div class="Boutons">
+            <button class="styleBouton" onclick="clickOngletDF('Gauche21','Gauche22','Gauche23')"><p class="texteBouton">Dépendances</p><p class="texteBouton">Fonctionnelles</p></button>
+            <button id='bouton22' class="styleBouton" onclick="clickOngletCouvMin('Gauche21','Gauche22','Gauche23')"><p class="texteBouton">Couverture</p><p class="texteBouton">Minimale</p></button>
+            <button id="bouton23" class="styleBouton" onclick="clickOngletRelation('Gauche21','Gauche22','Gauche23')"><p class="texteBouton2">Relations</p></button>
+    </div>
+            <div class="texteAffichageAttributs"><p id="ZoneTxt2"></p></div>
+            <div id=atom2></div>
+            <div id="Gauche21" style="display:block;">
+                <p class=Reduce id="AffichageDF3"></p>
+            </div>
+
+            <div id="Gauche22" style="display:none;">
+                <p  class=Reduce id=CouvMin3></p>
+            </div>
+
+            <div id="Gauche23" style="display:none;">
+                <p class=Reduce id="Relation3"></p>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="affichageGraphe3" name="affichageGraphe3" onclick="afficherGraphe(affichageGraphe3.checked,'FormulaireCheckBox3')">
+                <label for="affichageGraphe3">Graphe optimisé des dépendances fonctionnelles</label>
+                <div id="FormulaireCheckBox3"></div>
+            </div>
+        </div>
+        
+        <div id="PartieDroite">
+            <div id="Droite">
+                <button class="styleBouton" onclick="clickOngletExplication('Droite3', 'Droite4')">Afficher le résultat</button>
+                <button class="styleBouton" onclick="clickOngletTrace('Droite3', 'Droite4'), afficherTraceFermetureAttr()">Explication/Trace de l'algorithme</button>
+
+                <div id="Droite3" style="display:block;">
+                    <p style="text-decoration:underline;" id="ZoneEcritureFermeture"></p>
+                    <p class=Reduce id="FermetureAtt"></p>
+                </div>
+
+                <div id="Droite4" style="display:none;">
+                    <div>
+                        <p class="titreExplications">Explication : </p>
+                        <p class=Exp id="explicationsFermAtt"></p>
+                    </div>
+                    <div class="Trace">
+                        <p class="titreExplications">Trace : </p>
+                        <p id="traceFermAttr"></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
